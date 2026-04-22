@@ -1,4 +1,9 @@
 function calcularSalario(diaTra, salario){
-    return salario / diaTra
+    if(salario<=0 || diaTra<=0){
+        return 0
+    }
+    const i = Number((salario / diaTra).toFixed(2));
+
+    return i
 }
 module.exports = calcularSalario
